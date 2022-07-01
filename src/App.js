@@ -1,15 +1,13 @@
-import ButtonAppBar from "./ButtonAppBar";
-import Home from "./pages/Home";
-import { Paper, Container, Grid } from "@mui/material";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainBlogPage from "./pages/MainBlogPage";
+import SinglePostPage from "./pages/SinglePostPage";
 export default function App() {
   return (
-    <>
-      <ButtonAppBar position="sticky" />
-      <Container>
-        {/* <Paper elevation={4}> */}
-          <Home />
-        {/* </Paper> */}
-      </Container>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainBlogPage />}></Route>
+        <Route path="post/:postId" element={<SinglePostPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
