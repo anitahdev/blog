@@ -5,19 +5,20 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { Link } from "react-router-dom";
 
 function appBarLabel(label) {
   return (
     <Toolbar>
-      <IconButton
-        edge="start"
-        color="inherit"
-        aria-label="menu"
-        sx={{ mr: 2 }}
-      ></IconButton>
-      <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-        {label}
-      </Typography>
+      <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+        <Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
+          <Typography
+            variant="h6"
+            component="div"          >
+            Blog
+          </Typography>{" "}
+        </Link>
+      </IconButton>
     </Toolbar>
   );
 }
@@ -33,10 +34,10 @@ const darkTheme = createTheme({
 
 export default function ButtonAppBar() {
   return (
-      <ThemeProvider theme={darkTheme}>
-        <AppBar position="sticky" color="primary">
-          {appBarLabel("blog")}
-        </AppBar>
-      </ThemeProvider>
+    <ThemeProvider theme={darkTheme}>
+      <AppBar position="sticky" color="primary">
+        {appBarLabel()}
+      </AppBar>
+    </ThemeProvider>
   );
 }

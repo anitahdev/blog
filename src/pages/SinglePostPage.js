@@ -4,6 +4,8 @@ import GraphClient from "../graphClient";
 import { Link } from "react-router-dom";
 import ArticleCard from "../components/ArticleCard";
 import { Grid } from "@material-ui/core";
+import { Box } from "@mui/system";
+import { Typography } from "@mui/material";
 
 function SinglePostPage() {
   const { postId } = useParams();
@@ -29,10 +31,9 @@ function SinglePostPage() {
   if (!isLoading)
     return (
       <>
-        {" "}
         <ArticleCard post={post} isOnSinglePostPage />
-        <Link to={`/`}> Back</Link>
-      </>
+        
+         </>
     );
 }
 
