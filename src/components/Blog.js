@@ -26,7 +26,7 @@ function Blog() {
           {posts.map((post) => {
             return (
               <>
-                <div style={{ marginTop: "100px" }}></div>
+                <div style={{ marginTop: 80 }}></div>
                 <>
                   <Grid container spacing={2}>
                     <Grid item xs={10}>

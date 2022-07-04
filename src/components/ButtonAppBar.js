@@ -1,6 +1,5 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
-import Stack from "@mui/material/Stack";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
@@ -14,7 +13,9 @@ function appBarLabel(label) {
         <Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
           <Typography
             variant="h6"
-            component="div"          >
+            component="div"
+            sx={{marginLeft: 5}}
+          >
             Blog
           </Typography>{" "}
         </Link>
