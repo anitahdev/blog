@@ -29,7 +29,7 @@ function Blog() {
                 <>
                   <Grid container spacing={2}>
                     <Grid item xs={10}>
-                      <ArticleCard post={post}/>
+                      <ArticleCard post={post} />
                     </Grid>
                   </Grid>
                 </>

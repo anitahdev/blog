@@ -11,11 +11,7 @@ function appBarLabel() {
     <Toolbar>
       <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
         <Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{marginLeft: 5}}
-          >
+          <Typography variant="h6" component="div" sx={{ marginLeft: 5 }}>
             Blog
           </Typography>
         </Link>

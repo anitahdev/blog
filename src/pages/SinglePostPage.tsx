@@ -54,29 +54,29 @@ function SinglePostPage() {
     return (
       <>
         <Card sx={{ maxWidth: "100%", marginTop: 10, marginBottom: 10 }}>
-            <Grid container>
-              <Grid item md={6}>
-                <CardMedia
-                  component="img"
-                  height="100%"
-                  src={post.coverPhoto.url}
-                  alt={post.title}
-                ></CardMedia>
-              </Grid>
-              <Grid item md={6}>
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {post.title}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    author: {post.author.name}
-                  </Typography>
-                  <Typography variant="body1" color="text.secondary">
-                    {post.content.text}
-                  </Typography>
-                </CardContent>
-              </Grid>
+          <Grid container>
+            <Grid item md={6}>
+              <CardMedia
+                component="img"
+                height="100%"
+                src={post.coverPhoto.url}
+                alt={post.title}
+              ></CardMedia>
             </Grid>
+            <Grid item md={6}>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {post.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  author: {post.author.name}
+                </Typography>
+                <Typography variant="body1" color="text.secondary">
+                  {post.content.text}
+                </Typography>
+              </CardContent>
+            </Grid>
+          </Grid>
         </Card>
       </>
     );
