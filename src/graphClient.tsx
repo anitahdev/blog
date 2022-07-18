@@ -1,5 +1,6 @@
 import { GraphQLClient, gql } from "graphql-request";
 import { getPostAuthorsQuery } from "./query";
+import { Post } from "./components/types";
 
 class GraphClient {
   graphcms: GraphQLClient;
@@ -19,7 +20,7 @@ class GraphClient {
     );
     return posts;
   }
-  async getSinglePost(postId) {
+  async getSinglePost(postId: string): Promise<Post> {
     const { post } = await this.graphcms.request(
       gql`
         {

@@ -10,7 +10,6 @@ function Blog() {
 
   useEffect(() => {
     client.getPostAuthors().then((posts) => {
-      console.log(posts);
       setPosts(posts);
       setIsLoading(false);
     });
