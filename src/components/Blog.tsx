@@ -1,5 +1,5 @@
 import GraphClient from "../graphClient";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Grid } from "@mui/material";
 import ArticleCard from "./ArticleCard";
 
@@ -22,7 +22,6 @@ function Blog() {
     return (
       <>
         <div className="main">
-          {" "}
           {posts.map((post) => {
             return (
               <>
@@ -30,7 +29,7 @@ function Blog() {
                 <>
                   <Grid container spacing={2}>
                     <Grid item xs={10}>
-                      <ArticleCard post={post} isOnSinglePostPage={false} />
+                      <ArticleCard post={post}/>
                     </Grid>
                   </Grid>
                 </>

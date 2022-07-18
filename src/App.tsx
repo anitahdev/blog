@@ -8,7 +8,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<BaseLayout />}>
           <Route path="" element={<MainBlogPage />} />
-
+          <Route path="" element={<MainBlogPage />} />
           <Route path="post/:postId" element={<SinglePostPage />} />
         </Route>
       </Routes>

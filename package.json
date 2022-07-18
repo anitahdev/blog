@@ -9,12 +9,18 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^28.1.6",
+    "@types/node": "^18.0.5",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
     "graphql": "^16.5.0",
     "graphql-request": "^4.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "6",
     "react-scripts": "5.0.1",
+    "typescipt": "^1.0.0",
+    "typescript": "^4.7.4",
     "web-vitals": "^2.1.0"
   },
   "scripts": {

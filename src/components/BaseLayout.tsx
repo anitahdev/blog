@@ -1,12 +1,11 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
 import { Container } from "@mui/material";
-import ButtonAppBar from "../components/ButtonAppBar";
+import ButtonAppBar from "./ButtonAppBar";
 
 function BaseLayout() {
   return (
     <>
-      <ButtonAppBar position="sticky" />
+      <ButtonAppBar />
       <Container>
         <Outlet />
       </Container>

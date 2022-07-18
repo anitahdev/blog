@@ -2,12 +2,13 @@ import { GraphQLClient, gql } from "graphql-request";
 import { getPostAuthorsQuery } from "./query";
 
 class GraphClient {
+  graphcms: GraphQLClient;
   constructor() {
     this.graphcms = new GraphQLClient(
       "https://api-eu-west-2.graphcms.com/v2/cl4y5o95c0zdw01upgxblg69l/master"
     );
   }
-  get_query(query) {
+  get_query(query: string) {
     return gql`
       ${query}
     `;

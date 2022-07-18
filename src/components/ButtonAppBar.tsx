@@ -6,7 +6,7 @@ import IconButton from "@mui/material/IconButton";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Link } from "react-router-dom";
 
-function appBarLabel(label) {
+function appBarLabel() {
   return (
     <Toolbar>
       <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
@@ -17,7 +17,7 @@ function appBarLabel(label) {
             sx={{marginLeft: 5}}
           >
             Blog
-          </Typography>{" "}
+          </Typography>
         </Link>
       </IconButton>
     </Toolbar>
