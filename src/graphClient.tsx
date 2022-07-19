@@ -1,13 +1,15 @@
 import { GraphQLClient, gql } from "graphql-request";
 import { getPostAuthorsQuery } from "./query";
+import { Post } from "./components/types";
 
 class GraphClient {
+  graphcms: GraphQLClient;
   constructor() {
     this.graphcms = new GraphQLClient(
       "https://api-eu-west-2.graphcms.com/v2/cl4y5o95c0zdw01upgxblg69l/master"
     );
   }
-  get_query(query) {
+  get_query(query: string) {
     return gql`
       ${query}
     `;
@@ -18,7 +20,7 @@ class GraphClient {
     );
     return posts;
   }
-  async getSinglePost(postId) {
+  async getSinglePost(postId: string): Promise<Post> {
     const { post } = await this.graphcms.request(
       gql`
         {
