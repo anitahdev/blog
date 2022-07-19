@@ -9,9 +9,14 @@ import { Link } from "react-router-dom";
 function appBarLabel() {
   return (
     <Toolbar>
-      <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+      <IconButton
+        edge="start"
+        color="inherit"
+        aria-label="menu"
+        sx={{ marginLeft: 3 }}
+      >
         <Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
-          <Typography variant="h6" component="div" sx={{ marginLeft: 5 }}>
+          <Typography variant="h6" component="div">
             Blog
           </Typography>
         </Link>
