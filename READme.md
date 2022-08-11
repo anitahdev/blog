@@ -15,19 +15,21 @@ This is a blog project created with content housed in GraphCMS (a headless CMS) 
 Clone the project
 
 ```bash
-  git clone https://github.com/anitahoroszko/daft
+  git clone https://github.com/anitahoroszko/blog
 ```
 
 Go to the project directory
 
 ```bash
-  cd daft
+  cd blog
 ```
 
 Install dependencies
 
 ```bash
   yarn install
+  yarn add @mui/material @emotion/react @emotion/styled
+
 ```
 
 Start the server
