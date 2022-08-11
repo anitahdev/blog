@@ -15,7 +15,7 @@ This is a blog project created with content housed in GraphCMS (a headless CMS) 
 Clone the project
 
 ```bash
-  git clone https://github.com/anitahoroszko/blog
+  git clone https://github.com/anitavictoria/blog
 ```
 
 Go to the project directory
