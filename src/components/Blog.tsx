@@ -6,7 +6,7 @@ import { ApiContext } from "../hooks/useApi";
 function Blog() {
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const { getPostAuthors} = useContext(ApiContext)
+  const { getPostAuthors } = useContext(ApiContext);
   useEffect(() => {
     getPostAuthors().then((posts: any) => {
       setPosts(posts);
