@@ -23,3 +23,14 @@ jobs:
           # This part is also where you can pass other options, for example:
           prettier_options: --write **/*.{js,md}
           only_changed: True
+          
+name: Lint
+
+on: [push]
+
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: stefanoeb/eslint-action@1.0.2
