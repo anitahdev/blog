@@ -1,23 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
-import GraphClient from "../graphClient";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Grid } from "@material-ui/core/";
 import { Post } from "./types";
+import { ApiContext } from "../hooks/useApi";
 
 function PostComponent() {
   const { postId } = useParams<string>();
-  const client = new GraphClient();
   const [post, setPost] = useState<Post | null>(null);
   const [notFound, setNotFound] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-
+  const {getOnePost} = useContext(ApiContext)
   useEffect(() => {
     if (typeof postId === "string")
-      client.getSinglePost(postId).then((p: Post) => {
+      getOnePost(postId).then((p: Post) => {
         if (p === null) {
           setNotFound(true);
         }
@@ -64,3 +63,5 @@ function PostComponent() {
 }
 
 export default PostComponent;
+
+
