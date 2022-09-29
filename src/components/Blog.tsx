@@ -1,15 +1,14 @@
-import GraphClient from "../graphClient";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Grid } from "@mui/material";
 import ArticleCard from "./ArticleCard";
+import { ApiContext } from "../hooks/useApi";
 
 function Blog() {
-  const client = new GraphClient();
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
+  const { getPostAuthors } = useContext(ApiContext);
   useEffect(() => {
-    client.getPostAuthors().then((posts) => {
+    getPostAuthors().then((posts: any) => {
       setPosts(posts);
       setIsLoading(false);
     });
