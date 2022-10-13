@@ -1,6 +1,6 @@
 ![GraphQL_Blog (3)](https://user-images.githubusercontent.com/95635795/181271000-51d6c04c-286b-4c89-951a-f25bd213ccee.png)
 
-This is a blog project created with content housed in **GraphCMS** (a headless CMS) and delivered via **GraphQL API** for seamless display on a blog page. For this purpose I created a **custom React Hook**. I chose a simple, clean design that showcases dynamically changing posts in a chronlogical order.
+This is a blog project created with content housed in **GraphCMS** (a headless CMS) and delivered via **GraphQL API** for seamless display on a blog page. For this purpose I created a **custom React Hook**. I chose a simple, clean design that showcases dynamically changing posts in a chronlogical order. I deployed the app via **Netlify** so it can be viewed under this link: https://graphqlblog1.netlify.app/ 
 
 ![GraphQL](https://img.shields.io/badge/GRAPH-QL-violet) ![mui](https://img.shields.io/badge/MATERIAL-UI-blue)
 
