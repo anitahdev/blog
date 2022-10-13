@@ -13,7 +13,7 @@ function PostComponent() {
   const [post, setPost] = useState<Post | null>(null);
   const [notFound, setNotFound] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const {getOnePost} = useContext(ApiContext)
+  const { getOnePost } = useContext(ApiContext);
   useEffect(() => {
     if (typeof postId === "string")
       getOnePost(postId).then((p: Post) => {
@@ -23,6 +23,7 @@ function PostComponent() {
         setPost(p);
         setIsLoading(false);
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   if (notFound) {
     return <p>no results matched</p>;
@@ -63,5 +64,3 @@ function PostComponent() {
 }
 
 export default PostComponent;
-
-
